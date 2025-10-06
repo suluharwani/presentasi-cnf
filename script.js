@@ -1241,3 +1241,61 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(closingPage);
     }
 });
+function showDocument(imageUrl, title) {
+    // Cek apakah gambar tersedia
+    const img = new Image();
+    img.onload = function() {
+        // Gambar tersedia, tampilkan dengan SweetAlert
+        Swal.fire({
+            title: title,
+            html: `<div style="text-align: center;">
+                     <img src="${imageUrl}" alt="${title}" style="max-width: 100%; max-height: 60vh; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                   </div>`,
+            showCloseButton: true,
+            showConfirmButton: false,
+            width: '80%',
+            padding: '20px',
+            background: '#fff',
+            customClass: {
+                popup: 'custom-swal-popup',
+                title: 'custom-swal-title'
+            }
+        });
+    };
+    
+    img.onerror = function() {
+        // Gambar tidak tersedia, tampilkan pesan error
+        Swal.fire({
+            icon: 'error',
+            title: 'Dokumen Tidak Tersedia',
+            text: 'Dokumen sedang dalam proses update',
+            confirmButtonText: 'Tutup',
+            confirmButtonColor: '#2c5530'
+        });
+    };
+    
+    img.src = imageUrl;
+}
+
+// Optional: Tambahkan style custom untuk SweetAlert
+const style = document.createElement('style');
+style.textContent = `
+    .custom-swal-popup {
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    .custom-swal-title {
+        color: #2c5530;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+    .swal2-close {
+        color: #666;
+        font-size: 24px;
+    }
+    .swal2-close:hover {
+        color: #2c5530;
+    }
+`;
+document.head.appendChild(style);

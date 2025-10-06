@@ -8611,3 +8611,397 @@ body {
     color: white;
     text-decoration: none;
 }
+/* Styling khusus untuk halaman susunan direksi */
+.direksi-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.direksi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.direksi-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.direksi-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.direksi-header {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    background: linear-gradient(135deg, #2c5530, #4a7c59);
+    color: white;
+}
+
+.direksi-photo {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+    border: 4px solid rgba(255,255,255,0.3);
+}
+
+.photo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    padding: 5px;
+    text-align: center;
+}
+
+.photo-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+}
+
+.direksi-info {
+    flex: 1;
+}
+
+.direksi-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.direksi-position {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 10px;
+}
+
+.direksi-status {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-badge.active {
+    background: #10b981;
+    color: white;
+}
+
+.tenure {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.direksi-details {
+    padding: 25px;
+}
+
+.detail-section {
+    margin-bottom: 25px;
+}
+
+.detail-section:last-child {
+    margin-bottom: 0;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c5530;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e8f5e8;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-item.full-width {
+    grid-column: 1 / -1;
+}
+
+.detail-label {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.detail-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.documents-grid {
+    display: grid;
+    gap: 12px;
+}
+
+.doc-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.doc-icon {
+    font-size: 18px;
+    margin-right: 12px;
+}
+
+.doc-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.doc-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.doc-status {
+    font-size: 12px;
+    color: #10b981;
+    font-weight: 500;
+}
+
+.direksi-doc-btn {
+    padding: 8px 16px;
+    background: #2c5530;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    min-width: 60px;
+}
+
+.direksi-doc-btn:hover {
+    background: #1e3a23;
+    color: white;
+    text-decoration: none;
+}
+
+.tax-info {
+    display: grid;
+    gap: 10px;
+}
+
+.tax-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 6px;
+}
+
+.tax-label {
+    font-size: 14px;
+    color: #666;
+}
+
+.tax-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.tax-history {
+    display: grid;
+    gap: 8px;
+}
+
+.tax-year {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border-left: 4px solid #2c5530;
+}
+
+.year {
+    font-weight: 600;
+    color: #333;
+}
+
+.status {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.status.completed {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.amount {
+    font-weight: 600;
+    color: #2c5530;
+}
+
+.direksi-summary {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.summary-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.summary-icon {
+    font-size: 24px;
+    background: #e8f5e8;
+    padding: 12px;
+    border-radius: 10px;
+    min-width: 48px;
+    text-align: center;
+}
+
+.summary-content h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c5530;
+    margin-bottom: 5px;
+}
+
+.summary-content p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .direksi-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .direksi-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .direksi-photo {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .direksi-container {
+        padding: 15px;
+    }
+    
+    .direksi-header,
+    .direksi-details {
+        padding: 20px;
+    }
+    
+    .doc-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .doc-icon {
+        margin-right: 0;
+    }
+}
+/* Style untuk tombol dokumen direksi */
+.direksi-doc-btn {
+    padding: 8px 16px;
+    background: #2c5530;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 60px;
+}
+
+.direksi-doc-btn:hover {
+    background: #1e3a23;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(44, 85, 48, 0.3);
+}
+
+/* Responsive design untuk SweetAlert */
+@media (max-width: 768px) {
+    .custom-swal-popup {
+        width: 95% !important;
+        margin: 10px;
+    }
+    
+    .custom-swal-title {
+        font-size: 16px !important;
+    }
+}
